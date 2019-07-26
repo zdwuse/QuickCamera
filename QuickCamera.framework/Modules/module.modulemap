@@ -1,0 +1,6 @@
+framework module QuickCamera {
+  umbrella header "QuickCamera.h"
+
+  export *
+  module * { export * }
+}
