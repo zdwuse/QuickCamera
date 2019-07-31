@@ -36,20 +36,32 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)startRecord;
 
-/** 设置美颜 和 美白 效果级别
+/** 设置 美颜 效果级别
  @param beautyLevel     : 美颜级别取值范围 0 ~ 9； 0 表示关闭 1 ~ 9值越大 效果越明显。
+ */
+- (void)setBeautyLevel:(float)beautyLevel;
+
+/** 设置 美白 效果级别
  @param whitenessLevel  : 美白级别取值范围 0 ~ 9； 0 表示关闭 1 ~ 9值越大 效果越明显。
+ */
+- (void)setWhitenessLevel:(float)whitenessLevel;
+
+/** 设置 红润 效果级别
  @param ruddinessLevel  : 红润级别取值范围 0 ~ 9； 0 表示关闭 1 ~ 9值越大 效果越明显。
  */
-- (void)setBeautyLevel:(float)beautyLevel
-		whitenessLevel:(float)whitenessLevel
-		ruddinessLevel:(float)ruddinessLevel;
+- (void)setRuddinessLevel:(float)ruddinessLevel;
 
 /**
  设置指定素材滤镜特效
  @param filterImage 指定素材，即颜色查找表图片。注意：一定要用png格式！！！
  */
 - (void)setImageFilter:(UIImage *)filterImage;
+
+/**
+ 设置滤镜效果程度
+ @param specialRatio  从0到1，越大滤镜效果越明显，默认取值0.5
+ */
+- (void)setSpecialRatio:(float)specialRatio;
 
 /**
  设置两个滤镜效果 [精简版不支持]
